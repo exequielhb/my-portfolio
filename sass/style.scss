@@ -1,0 +1,519 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  background-color: var(--bg-grey-light);
+
+  /* background colors */
+  --bg-grey-light: #fff;
+
+  a {
+    text-decoration: none;
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 25px;
+
+  button {
+    background-color: transparent;
+    border: 2px solid #ebeaed;
+    padding: 8px 16px;
+    border-radius: 100px;
+    cursor: pointer;
+    outline: none;
+    font-weight: 500;
+    size: 16px;
+    line-height: 22px;
+    color: #1e0e62;
+  }
+
+  p {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31.25px;
+    color: #1e0e62;
+  }
+}
+
+header {
+  padding: 1rem 1rem 8rem;
+  text-align: center;
+  background-color: #f1f1f1;
+
+  h3,
+  p {
+    text-align: left;
+    margin-left: 2em;
+    margin-top: 7%;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 700;
+    padding: 1em;
+    color: #1e0e62;
+  }
+
+  .text {
+    background: linear-gradient(to right, #40e2e2 0%, #461287 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font: {
+      size: 35px;
+      family: "DM Sans", sans-serif;
+    }
+  }
+
+  h3,
+  h2 {
+    color: #1e0e62;
+  }
+
+  p {
+    font-size: 18px;
+    color: rgba(21, 20, 57, 0.4);
+  }
+
+  .portada {
+    width: 77%;
+    border-radius: 10px;
+  }
+
+  main {
+    padding: 3em 0 3em 0;
+  }
+
+  .habilidades {
+    padding-top: 4em;
+    padding-right: 2em;
+
+    .mis-habilidades {
+      padding-bottom: 2em;
+    }
+  }
+}
+
+.mi-experiencia {
+  padding: 4em 2em 3em 2em;
+
+  p {
+    font-size: 18px;
+    color: rgba(21, 20, 57, 0.4);
+  }
+
+  img {
+    width: 100%;
+    height: 155px;
+    border-radius: 8px;
+  }
+
+  .bio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+
+    h2 {
+      font-size: 35px;
+      font-weight: 700;
+      color: #1e0e62;
+      margin: 0%;
+    }
+
+    button {
+      background-color: #5fd068;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 100px;
+      cursor: pointer;
+      outline: none;
+      font-weight: 500;
+      size: 16px;
+      line-height: 22px;
+      color: #fff;
+    }
+  }
+
+  .proyectos {
+    padding: 4em 0 2em 0;
+
+    div {
+      padding-bottom: 4em;
+    }
+
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h3,
+    a {
+      color: #1e0e62;
+    }
+  }
+}
+
+footer {
+  background-color: #f1f1f1;
+
+  div {
+    padding: 6em 1em 5em 1em;
+  }
+
+  .informacion,
+  .email {
+    text-align: center;
+    font-size: 22px;
+    margin: 0;
+    padding: 0.2em;
+  }
+
+  .informacion {
+    color: #1e0e62;
+    font-weight: 700;
+  }
+
+  .email {
+    .decoration {
+      color: #743aa4;
+      font-weight: 700;
+    }
+  }
+
+  ul {
+    display: flex;
+    padding: 0% 4em;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  ul li img {
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+  }
+}
+
+// transition
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+// media querys
+
+@media screen and (min-width: 680px) {
+  header {
+    padding: 1rem 1rem 8rem;
+    text-align: center;
+    background-color: #f1f1f1;
+
+    main {
+      display: flex;
+
+      h1 {
+        padding: 0.4em;
+      }
+
+      .portada {
+        width: 42%;
+      }
+    }
+
+    .habilidades {
+      padding: 1em;
+
+      .mis-habilidades {
+        p {
+          text-align: center;
+        }
+      }
+    }
+
+    .container-habilidades {
+      display: flex;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .mi-experiencia {
+    .proyectos {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 3em 1em 1em;
+      justify-content: space-between;
+
+      div {
+        width: 30%;
+      }
+    }
+  }
+
+  footer {
+    p {
+      font-size: 24px;
+    }
+
+    ul {
+      padding: 1em;
+    }
+  }
+}
+
+@media screen and (min-width: 962px) {
+  header {
+    main {
+      h1 {
+        font-size: 50px;
+      }
+
+      .text {
+        font-size: 50px;
+      }
+
+      .portada {
+        width: 49%;
+      }
+    }
+
+    .habilidades {
+      h2 {
+        font-size: 30px;
+      }
+      p,
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .mi-experiencia {
+    p {
+      font-size: 20px;
+    }
+
+    .proyectos {
+      h3 {
+        font-size: 23px;
+      }
+    }
+  }
+
+  footer {
+    p {
+      font-size: 27px;
+    }
+
+    ul {
+      margin: 0;
+      padding-top: 2em;
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  header {
+    div {
+      padding-top: 5em;
+
+      h1,
+      .text {
+        font-size: 58px;
+      }
+    }
+
+    p {
+      font-size: 22px;
+    }
+
+    .portada {
+      width: 50%;
+    }
+
+    .habilidades {
+      p {
+        font-size: 23px;
+      }
+      .mis-habilidades {
+        padding-bottom: 0%;
+
+        h2 {
+          font-size: 35px;
+        }
+      }
+
+      .container-habilidades {
+        padding: 1em;
+        h3 {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+
+  .mi-experiencia {
+    padding: 13em 3em 13em 3em;
+
+    .bio {
+      padding: 0em 10em 0em 10em;
+    }
+
+    .bio button {
+      padding: 16px 26px;
+    }
+    p {
+      font-size: 22px;
+    }
+  }
+
+  footer {
+    .informacion,
+    .email {
+      font-size: 32px;
+    }
+
+    ul {
+      padding-top: 3em;
+
+      li img {
+        width: 47px;
+        height: 46px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1445px) {
+  body {
+    nav {
+      padding: 1em 6em;
+    }
+
+    button {
+      padding: 19px 30px;
+    }
+
+    button.a {
+      font-size: 20%;
+    }
+  }
+
+  header {
+    main {
+      h1 {
+        padding: 0.5em;
+      }
+    }
+    p {
+      font-size: 27px;
+    }
+    .habilidades {
+      padding: 3em;
+      .mis-habilidades {
+        padding: 2em 9em 0 9em;
+      }
+    }
+  }
+
+  .mi-experiencia {
+    .bio {
+      padding: 0em 16em 0em 16em;
+    }
+
+    .proyectos {
+      padding: 4em 1em 1em;
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+    }
+  }
+
+  footer {
+    div {
+      padding: 8em 7em 5em 7em;
+    }
+  }
+}
+
+@media screen and (min-width: 1577px) {
+  header {
+    main {
+      padding: 3em 4em 3em 4em;
+    }
+
+    .habilidades {
+      padding: 5em;
+    }
+  }
+
+  .mi-experiencia {
+    .proyectos {
+      padding: 4em 3em 3em;
+    }
+  }
+}
+
+@media screen and (min-width: 1833px) {
+  header {
+    main {
+      div {
+        padding: 4em 5em 4em 5em;
+      }
+    }
+  }
+
+  .mi-experiencia {
+    .proyectos {
+      padding: 4em 5em 2em;
+    }
+
+    img {
+      height: 214px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1865px) and (max-width: 1940px) {
+  header {
+    main {
+      div {
+        padding: 4em 8em 4em 8em;
+      }
+    }
+  }
+}
